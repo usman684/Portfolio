@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
 
 const featuredProjects = [
@@ -86,7 +86,7 @@ export default function Projects() {
       {/* Featured Projects */}
       <div className="container mx-auto px-6 grid gap-16 md:gap-32 mb-32">
         {featuredProjects.map((project, idx) => (
-          <motion.div
+          <div
             key={project.title}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -133,7 +133,7 @@ export default function Projects() {
                 </a>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
 
